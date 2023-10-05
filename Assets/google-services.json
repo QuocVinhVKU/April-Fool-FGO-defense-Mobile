@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "713153927996",
+    "project_id": "fgo-defense",
+    "storage_bucket": "fgo-defense.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713153927996:android:fe18321897ded147741c39",
+        "android_client_info": {
+          "package_name": "com.ZinhPixry.AprilFoolsFGODefense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713153927996-2p78d07hooo38jd2hj7v3r5e9c76idge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt8crGd-qWIoH4s2y_p1FYGq8yLNd-Kw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713153927996-2p78d07hooo38jd2hj7v3r5e9c76idge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
