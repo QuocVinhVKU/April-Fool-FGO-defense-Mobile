@@ -11,7 +11,6 @@ public class Billy : Servant
     private float lineLengh = 25f;
     public LayerMask layerMask;
     private RaycastHit2D hit;
-    public AudioSource plantServant;
 
     private void Awake()
     {
@@ -48,6 +47,7 @@ public class Billy : Servant
     void ShootItem()
     {
         GameObject shootItem = Instantiate(prefab_shootItem, transform);
+        shootItem.transform.parent = SpawnedManager.instance.objectPool;
     }
 
 }

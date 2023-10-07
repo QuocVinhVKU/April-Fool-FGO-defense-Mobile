@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 1176953503150592433}
   m_Layer: 0
   m_Name: Snow
-  m_TagString: Untagged
+  m_TagString: TileSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -10,8 +10,10 @@ public class Servant : MonoBehaviour
     public BoxCollider2D boxColl;
     public Animator animator;
     public bool servantCanDelete;
-
+    public bool isSpawnedServant;
     public Vector3Int cellPosition;
+
+    public AudioSource plantServant;
     protected virtual void Start()
     {
         animator = this.GetComponent<Animator>();
@@ -21,7 +23,6 @@ public class Servant : MonoBehaviour
     private void Update()
     {
         servantCanDelete = boolCanDelete.canDelete;
-        
     }
     private void OnMouseDown()
     {
@@ -67,20 +68,25 @@ public class Servant : MonoBehaviour
         FindObjectOfType<Spawer>().RevertCellState(cellPosition);
         Destroy(gameObject);
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "TileSpawn")
+        if (collision.CompareTag("TileSpawn"))
         {
             TileSpawn tile = collision.gameObject.GetComponentInParent<TileSpawn>();
-            if(tile != null)
+            if (tile != null)
             {
-                if (!tile.isSpawned) 
-                { 
+                if (!tile.isSpawned && !isSpawnedServant)
+                {
+                    isSpawnedServant = true;
                     tile.isSpawned = true;
                     this.gameObject.transform.position = collision.transform.parent.position;
+                    return;
                 }
             }
         }
+    }
+    void DestroySpawned()
+    {
+        Destroy(this.gameObject);
     }
 }
