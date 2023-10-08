@@ -291,15 +291,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boolCanDelete: {fileID: 11400000, guid: 2596971f8831b3d42a29dd0a92a67f16, type: 2}
-  health: 300
-  cost: 10
+  servantStats: {fileID: 11400000, guid: 13626e690e956b646b1f4f6b19bf972a, type: 2}
   boxColl: {fileID: 0}
   animator: {fileID: 6329225241581611606}
   servantCanDelete: 0
   isSpawnedServant: 0
   cellPosition: {x: 0, y: 0, z: 0}
-  plantServant: {fileID: 8520580644060345179}
+  ServantName: Billy (Billy the Kid)
+  health: 300
   dame: 25
+  servantDetail: looks innocent, but won't hesitate to shoot his enemies in the face.
+    But...he use <color=#fa21a0>Fire ball</color> in this game, like a magic caster
+    :D
+  cost: 100
+  plantServant: {fileID: 8520580644060345179}
   prefab_shootItem: {fileID: 223748735313121602, guid: 69abd533b34fe184a9323a9ca3376a9b, type: 3}
   timeAttack: 1.2
   layerMask:

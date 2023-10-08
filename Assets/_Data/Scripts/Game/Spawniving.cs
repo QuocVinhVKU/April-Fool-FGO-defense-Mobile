@@ -10,17 +10,22 @@ public class Spawniving : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public GameObject CharPrefab;
     public GameObject ObjectSpawend;
 
+    public Image icon;
+    public Sprite defaultIcon;
     private bool isDrop = false;
 
     private int cost;
-    [SerializeField] private TextMeshProUGUI price;
-
-    private void Start()
+    public TextMeshProUGUI price;
+    void Start()
+    {
+        this.gameObject.GetComponent<Image>().raycastTarget = false;
+        this.enabled = false;
+    }
+    public void InitUI()
     {
         cost = CharPrefab.GetComponent<Servant>().cost;
         price.text = cost.ToString();
     }
-
     void FixedUpdate()
     {
         if(ObjectSpawend != null && !isDrop)

@@ -5,17 +5,36 @@ using UnityEngine;
 public class Servant : MonoBehaviour
 {
     public BoolCanDelete boolCanDelete;
-    public int health;
-    public int cost;
+
+    [SerializeField] ServantStats servantStats;
+    
     public BoxCollider2D boxColl;
     public Animator animator;
     public bool servantCanDelete;
     public bool isSpawnedServant;
     public Vector3Int cellPosition;
 
+    //[HideInInspector]
+    public string ServantName;
+    //[HideInInspector]
+    public int health;
+    //[HideInInspector]
+    public int dame;
+    //[HideInInspector]
+    public string servantDetail;
+    //[HideInInspector]
+    public int cost;
+
     public AudioSource plantServant;
     protected virtual void Start()
     {
+        ServantName = servantStats.ServantName;
+        health = servantStats.health;
+        dame = servantStats.dame;
+        servantDetail = servantStats.servantDetail;
+        cost = servantStats.cost;
+
+
         animator = this.GetComponent<Animator>();
         boxColl = this.GetComponent<BoxCollider2D>();
         //Debug.Log("base");

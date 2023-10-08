@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Billy : Servant
 {
-    public int dame;
     public GameObject prefab_shootItem;
     public float timeAttack;
     private float TimeAttack;
