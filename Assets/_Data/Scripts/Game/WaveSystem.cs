@@ -15,10 +15,18 @@ public class WaveSystem : MonoBehaviour
     public GameObject win_Panel;
     public Victory victory;
     public GameObject gift;
+
+    public bool gameStarted;
     private void Start()
     {
         numEnemyDie.value = 0;
+        instance = this;
+    }
+    public void StartWave()
+    {
+        gameStarted = true;
         StartCoroutine(FirstSpawner());
+        GameObject.Find("ObjectHideAfterPlay").SetActive(false);
     }
     private void Update()
     {
@@ -48,6 +56,7 @@ public class WaveSystem : MonoBehaviour
         }
         else
         {
+            if (!gameStarted) return;
             numWave[currentWave].waveCountDown -= Time.deltaTime;
         }
 
